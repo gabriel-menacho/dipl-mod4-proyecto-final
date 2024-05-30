@@ -1,0 +1,24 @@
+'use client'
+
+import clsx from 'clsx';
+import styles, { {{camelCase name}}Classes } from './styles';
+import { I{{pascalCase name}}Props } from './types';
+import { styled, Box } from '@mui/material';
+
+const testId =  '{{kebabCase name}}';
+
+const {{pascalCase name}} = styled(Box)(styles.{{camelCase name}});
+
+export default function (props: I{{pascalCase name}}Props) {
+   const classProps = clsx(props.className, {{camelCase name}}Classes.root);
+   
+   return (
+     <{{pascalCase name}} className={classProps}  data-testid={testId}>
+       <h1>{{pascalCase name}}</h1>
+     </{{pascalCase name}}>
+   );
+}
+
+export type { I{{pascalCase name}}Props };
+export { {{camelCase name}}Classes };
+export { testId as {{pascalCase name}}TestId };
