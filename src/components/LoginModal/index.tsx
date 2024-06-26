@@ -59,6 +59,7 @@ export default function ({ className, ...props }: ILoginModalProps) {
           <Input
             id={'email'}
             control={control}
+            data-testid={'email-input'}
             name="email"
             label="Email"
             size={'medium'}
@@ -69,6 +70,7 @@ export default function ({ className, ...props }: ILoginModalProps) {
           <Input
             id={'password'}
             control={control}
+            data-testid={'password-input'}
             name="password"
             label="Password"
             size={'medium'}
@@ -89,7 +91,11 @@ export default function ({ className, ...props }: ILoginModalProps) {
             </Box>
           )}
           {errorMsg && (
-            <Typography color={'error'} align={'center'}>
+            <Typography
+              data-testid={'error-msg'}
+              color={'error'}
+              align={'center'}
+            >
               {errorMsg}
             </Typography>
           )}
@@ -98,6 +104,7 @@ export default function ({ className, ...props }: ILoginModalProps) {
             variant="contained"
             fullWidth
             disabled={loading}
+            data-testid={'login-action-button'}
           >
             <Typography sx={{ fontWeight: '600' }}>Login</Typography>
           </Button>

@@ -40,7 +40,7 @@ export default function ({
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Cancel</Button>
-        <Button onClick={onConfirm} autoFocus>
+        <Button data-testid="confirm-button" onClick={onConfirm} autoFocus>
           Confirm
         </Button>
       </DialogActions>

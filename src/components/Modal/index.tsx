@@ -28,7 +28,10 @@ export default function ({
       <Box className={modalClasses.container}>
         {onClose && (
           <Box className={modalClasses.header}>
-            <IconButton onClick={(e) => onClose(e, 'backdropClick')}>
+            <IconButton
+              data-testid="close-button"
+              onClick={(e) => onClose(e, 'backdropClick')}
+            >
               <ClearIcon />
             </IconButton>
           </Box>

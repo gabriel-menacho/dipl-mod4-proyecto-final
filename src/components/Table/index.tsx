@@ -75,11 +75,14 @@ export default function ({ className, data = [], editable }: ITableProps) {
                   {editable && (
                     <TableCell>
                       <Tooltip title="Edit">
-                        <IconButton onClick={() => handleEdit(row)}>
+                        <IconButton
+                          data-testid="edit-button"
+                          onClick={() => handleEdit(row)}
+                        >
                           <EditIcon />
                         </IconButton>
                       </Tooltip>
-                      <Tooltip title="Delete">
+                      <Tooltip data-testid="delete-button" title="Delete">
                         <IconButton onClick={() => handleDelete(row.id)}>
                           <DeleteIcon />
                         </IconButton>
