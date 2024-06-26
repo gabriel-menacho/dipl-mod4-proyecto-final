@@ -3,13 +3,14 @@
   "version": "5.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8000",
     "lint": "next lint",
     "post-update": "echo \"codesandbox preview only, need an update\" && pnpm update --latest",
     "generate": "plop --plopfile generators/plopfile.js",
-    "format": "prettier --write"
+    "format": "prettier --write",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -30,6 +31,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "cypress": "^13.12.0",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "plop": "^4.0.1",
