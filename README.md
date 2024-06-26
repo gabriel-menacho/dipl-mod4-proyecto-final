@@ -145,4 +145,4 @@ yarn run cypress run
 ```
 ---
 
-[Volver al inicio](#Proyecto Frontend en Next.js para el Módulo 4 del Diplomado Fullstack)
+[Volver al inicio](#proyecto-frontend-en-nextjs-para-el-módulo-4-del-diplomado-fullstack)
