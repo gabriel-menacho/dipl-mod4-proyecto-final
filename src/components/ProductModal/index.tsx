@@ -84,6 +84,7 @@ export default function ({
             labelVariant={'subtitle1'}
             disabled={loading}
             rules={{ required: 'This field is required' }}
+            data-testid={'name-input'}
           />
           <Input
             id={'price'}
@@ -95,6 +96,7 @@ export default function ({
             labelVariant={'subtitle1'}
             disabled={loading}
             rules={{ required: 'This field is required' }}
+            data-testid={'price-input'}
           />
           <Input
             id={'description'}
@@ -106,12 +108,14 @@ export default function ({
             disabled={loading}
             rules={{ required: 'This field is required' }}
             multiline
+            data-testid={'description-input'}
           />
           <Button
             type={'submit'}
             variant={'contained'}
             color={'primary'}
             disabled={loading}
+            data-testid={`submit-${data.id ? 'update' : 'create'}-button`}
           >
             {data.id ? 'Update' : 'Create'}
           </Button>

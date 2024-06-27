@@ -24,4 +24,5 @@ export type IInputProps<T extends FieldValues> = {
   multiline?: boolean
   bgcolor?: string
   labelVariant?: Variant
+  'data-testid'?: string
 }

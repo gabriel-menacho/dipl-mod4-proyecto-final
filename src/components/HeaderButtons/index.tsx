@@ -33,6 +33,7 @@ export default function (props: IHeaderButtonsProps) {
           variant="contained"
           color="primary"
           onClick={handleLogOut}
+          data-testid="logout-button"
         >
           Log Out
         </Button>
@@ -42,6 +43,7 @@ export default function (props: IHeaderButtonsProps) {
           size="small"
           variant="contained"
           color="primary"
+          data-testid="login-button"
         >
           Log In
         </Button>

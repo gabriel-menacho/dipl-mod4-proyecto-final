@@ -43,13 +43,14 @@ export const Input = <T extends FieldValues>({
   multiline = false,
   bgcolor,
   labelVariant = 'subtitle2',
+  'data-testid': dataTestId = testId,
 }: IInputProps<T>) => {
   const classProps = clsx(className, inputClasses.root)
   const [showPassword, setShowPassword] = useState(false)
   const handleClickShowPassword = () => setShowPassword(!showPassword)
 
   return (
-    <InputCmp className={classProps} data-testid={testId}>
+    <InputCmp className={classProps} data-testid={dataTestId}>
       <InputLabel htmlFor={id}>
         <Typography
           variant={labelVariant}
